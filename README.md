@@ -1,4 +1,4 @@
-#Angular Self Learning**
+#Angular Self Learning
 
 `npm -> Node Package Manager`
 
