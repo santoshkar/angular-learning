@@ -1,61 +1,66 @@
-# angular-learning
+#Angular Self Learning**
 
-Angular Self Learning
+`npm -> Node Package Manager`
 
-npm -> Node Package Manager
-
-First, install node.js
+`First, install node.js`
 
 
-> sudo npm install -g @angular/cli
-> ng new <app name>				e.g. ng new my-first-app, this will create a new application with the name my-first-app
-> cd my-first-app
-> ng serve
+`> sudo npm install -g @angular/cli`
+
+`> ng new <app name>	`			e.g. ng new my-first-app, this will create a new application with the name my-first-app
+
+`> cd my-first-app`
+
+`> ng serve`
 
 
-[(ngModel)] = “name” in html where name is a variable in the type script, it’s a 2 way finding
+**[(ngModel)]** **= "name"** in html where name is a variable in the type script, it’s a 2 way finding
 also can access as {{name}} in html
 
 ngModel is part of FormsModule. So you need to import the module in app.module.ts as: 
 import { FormsModule } from ‘@angular/forms’
 
+<pre>
 @NgModule ({
-	:
-	:
 	imports: [
 		FormsModule
 	]
-
 })
+</pre>
 
+###Type Script
 
-Type Script
 Super script of java script. It provides features as class, interface, strong types etc. Type script is compiled to java script by CLI before running in the browser. 
 
-installing bootstrap
+**installing bootstrap**
+
 npm install -save bootstrap@3 to install version 3
 Imp: it should be run only inside your project path
 
 Once it’s run, the boostrap folder will be created under node-modules folder. This folder will have all necessary files including the .css file.
 In order to use the style of bootstrap, you need to make an entry in .angular-cli.json as
 
+<pre>
 "styles": [
   "styles.css",
-  "../node_modules/bootstrap/dist/css/bootstrap.css"
+  <b>"../node_modules/bootstrap/dist/css/bootstrap.css"</b>
 ],
+</pre>
 
 
-Components
+###Components
+
 Every component refers to a particular function in the UI. E.g. Home component, User component etc. It’s a reusable component.
 Each component has it’s own business logic (throw TS), style etc.
 
 The app component is the default and root component. Any new component you are going to create should be created under the folder app.
 
-Step - 1 (Create Angular Component)
+**Step - 1** (Create Angular Component)
 create a folder as server under app folder. In app/server, create file server.component.ts with contents:
 
 import { Component } from '@angular/core';
 
+<pre>
 @Component({
   selector: 'app-server',
   templateUrl: './server.component.html’            ———> create server.component.html under app/server folder
@@ -63,10 +68,12 @@ import { Component } from '@angular/core';
 export class ServerComponent {
 
 }
+</pre>
 
-Step - 2 (Register Angular Component)
+**Step - 2** (Register Angular Component)
 Register for this component to be scanned by Angular. In the root module i.e. app.module.ts
 
+<pre>
 import { ServerComponent } from './server/server.component';
 @NgModule({
   declarations: [
@@ -80,24 +87,30 @@ import { ServerComponent } from './server/server.component';
   providers: [ServerComponent],
   bootstrap: [AppComponent],
 })
+</pre>
 
-Step-3 (Create HTML which is entered in server.component.ts)
+**Step-3** (Create HTML which is entered in server.component.ts)
 
-Step-4 (Use the template in html)
+**Step-4** (Use the template in html)
 In app.component.html, use
-<app-server>This is loading……..</app-server>
+
+`<app-server>This is loading……..</app-server>`
 
 
-*Creating component using CLI
+####Creating component using CLI
 
+<pre>
 ng generate component servers
 or
 ng -g -c servers
+</pre>
 
 *By creating this, you can simple skip step 2 (registering component) and creating other dependent files manually
 
 
-Difference: template and templateUrl in the .ts file
+**Difference: template and templateUrl in the .ts file**
+
+<pre>
 try:
 templateUrl: './servers.component.html'
 or
@@ -154,14 +167,15 @@ Old:
 New:
 <div class='app-servers'></div>
 
-	
+</pre>
 
-Data Binding
+###Data Binding
 
 You can use both method and variable as:
 
 {{variable}} or {{getMyMethod()}}
 
+<pre>
 ts
 public name = ‘Santosh';
 
@@ -174,24 +188,26 @@ html
 name : {{name}}
 <br>
 getName() : {{getName()}}
+</pre>
 
 
+###Property Binding
 
-Property Binding
 
-<button disabled>hello</button> 
+`<button disabled>hello</button>` 
 	here the button is statically disabled. But we want to do it dynamically.
 
 So first step, this property should be bind with a .ts variable as [property] = <variable>
 
+<pre>
 so in .ts, 
 	isDisabled = false;
 in html:
-	<button [disabled]=‘isDisabled’>hello</button> 
+	&lt;button [disabled]='isDisabled'>hello&lt;/button> 
 
 another example:
-	<p [innerText]=‘isDisabled’></p>
-
+	&lt;p [innerText]='isDisabled'></p>
+</pre>
 
 
 
