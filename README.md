@@ -114,7 +114,7 @@ ng -g -c servers
 try:
 templateUrl: './servers.component.html'
 or
-template: '<app-server></app-server> <app-server></app-server>',
+template: '&lt;app-server>&lt;/app-server> &lt;app-server>&lt;/app-server>',
 similarly you can write inline styles too in the .ts file.
 
 Using selector as an attribute
@@ -140,7 +140,7 @@ Old:
 
 
 New:
-<div app-servers></div>
+&lt;div app-servers>&lt;/div>
 
 Using selector as a class
 
@@ -193,10 +193,10 @@ getName() : {{getName()}}
 <h3>Property Binding</h3>
 
 
-`<button disabled>hello</button>` 
+`<button disabled>hello</button>` <br>
 	here the button is statically disabled. But we want to do it dynamically.
 
-So first step, this property should be bind with a .ts variable as [property] = <variable>
+So first step, this property should be bind with a .ts variable as [property] = &lt;variable>
 
 <pre>
 so in .ts, 
