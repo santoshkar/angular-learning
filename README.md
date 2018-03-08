@@ -1,4 +1,4 @@
-#Angular Self Learning
+<h1>Angular Self Learning</h1>
 
 `npm -> Node Package Manager`
 
@@ -28,11 +28,11 @@ import { FormsModule } from ‘@angular/forms’
 })
 </pre>
 
-###Type Script
+<h3>Type Script</h3>
 
 Super script of java script. It provides features as class, interface, strong types etc. Type script is compiled to java script by CLI before running in the browser. 
 
-**installing bootstrap**
+<h3>installing bootstrap</h3>
 
 npm install -save bootstrap@3 to install version 3
 Imp: it should be run only inside your project path
@@ -48,7 +48,7 @@ In order to use the style of bootstrap, you need to make an entry in .angular-cl
 </pre>
 
 
-###Components
+<h3>Components</h3>
 
 Every component refers to a particular function in the UI. E.g. Home component, User component etc. It’s a reusable component.
 Each component has it’s own business logic (throw TS), style etc.
@@ -136,7 +136,7 @@ New:
 
 In html……….
 Old:
-<app-servers></app-servers>
+&lt;app-servers>&lt;/app-servers>
 
 
 New:
@@ -161,15 +161,15 @@ New:
 
 In html……….
 Old:
-<app-servers></app-servers>
+&lt;app-servers>&lt;/app-servers>
 
 
 New:
-<div class='app-servers'></div>
+&lt;div class='app-servers'>&lt;/div>
 
 </pre>
 
-###Data Binding
+<h3>Data Binding</h3>
 
 You can use both method and variable as:
 
@@ -191,7 +191,7 @@ getName() : {{getName()}}
 </pre>
 
 
-###Property Binding
+<h3>Property Binding</h3>
 
 
 `<button disabled>hello</button>` 
