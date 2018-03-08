@@ -97,7 +97,7 @@ In app.component.html, use
 `<app-server>This is loading……..</app-server>`
 
 
-####Creating component using CLI
+<h4>*Creating component using CLI</h4>
 
 <pre>
 ng generate component servers
@@ -163,9 +163,8 @@ In html……….
 Old:
 &lt;app-servers>&lt;/app-servers>
 
-
 New:
-&lt;div class='app-servers'>&lt;/div>
+&lt;div class='app-servers'> &lt;/div>
 
 </pre>
 
