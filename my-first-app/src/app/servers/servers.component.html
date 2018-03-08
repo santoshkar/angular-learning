@@ -1,0 +1,10 @@
+<p>
+  servers works!
+</p>
+<app-server></app-server>
+<app-server></app-server>
+
+<!--<button [disabled]="!allowNewServer" class="btn btn-primary btn-sm">Add Server</button>-->
+
+<button id="f1" [disabled]="!isDisabled" class="btn btn-primary btn-sm" (click)="clickMe($event)">Add Server</button>
+<p [innerText]='isDisabled'></p>
